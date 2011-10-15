@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CodeBoard</title>
+
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/mode-c_cpp.js" type="text/javascript" charset="utf-8"></script>
+    <script src="client.js" type="text/javascript" charset="utf-8"></script>
+
+    <style>
+      #editor {
+         font-size: 18px;
+         font-family: 'Consolas', 'Monaco', 'Droid Sans Mono', monospace;
+         position: absolute;
+         top: 0px;
+         bottom: 0px;
+         left: 0px;
+         right: 0px;
+      }      
+
+      .ace-twilight .ace_gutter-layer {
+         background: #0a0a0a;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="editor"></div>
+<script type="text/editor" id="program">
+#include <iostream>
+using namespace std;
+      
+int main() {
+  cout << "Hola, mon!" << endl;
+}
+</script>
+
+  </body>
+</html>
