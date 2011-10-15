@@ -37,7 +37,12 @@ app.get('/:name', function (req, res) {
 });
 
 app.get('/:name/view', function (req, res) {
-   res.render('student', { name: req.params.name });
+   var name = req.params.name;
+   if (name in Boards) {
+      res.render('student', { name: name });
+   } else {
+      res.send('No board with name: "' + name + '"');
+   }
 });
 
 app.get('/:name/del', function (req, res) {
