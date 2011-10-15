@@ -1,0 +1,32 @@
+!!! 5
+html
+  head
+    title CodeBoard
+    block scripts
+      script(src='/js/dnode.js', type='text/javascript', charset='utf-8') 
+      script(src='/js/jquery.js', type='text/javascript', charset='utf-8') 
+      script(src='/js/ace.js', type='text/javascript', charset='utf-8') 
+      script(src='/js/theme-twilight.js', type='text/javascript', charset='utf-8')
+      script(src='/js/mode-c_cpp.js', type='text/javascript', charset='utf-8')
+
+    style.
+       #editor {
+          font-size: 18px;
+          font-family: 'Consolas', 'Monaco', 'Droid Sans Mono', monospace;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+       }
+       .ace-twilight .ace_gutter-layer {
+          background: #0a0a0a;
+       }
+
+  body
+    div#editor
+
+    script
+      var boardName = "#{name}";
+
+    div!= body
